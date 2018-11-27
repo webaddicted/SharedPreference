@@ -83,7 +83,13 @@ public class PreferenceUtil {
             e.printStackTrace();
         }
     }
-
+ /**
+     * clear key preference when required
+     */
+    public void clearKeyPreferences(String key) {
+        if (sharedPreferences != null)
+            sharedPreferences.edit().remove(key).commit();
+    }
     /**
      * clear preference when required
      */
